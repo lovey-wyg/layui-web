@@ -2,5 +2,6 @@
 /.vscode
 /vendor
 *.log
+php.xml
 .travis.yml
 .env
