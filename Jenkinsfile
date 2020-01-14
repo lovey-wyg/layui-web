@@ -5,9 +5,6 @@ pipeline {
     environment{
         PROJECT_NAME = 'web-im'
     }
-    options {
-
-    }
     // 结果通知
     post{
         success{
