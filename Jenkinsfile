@@ -17,12 +17,12 @@ pipeline {
         }
         failure{
             script {
-
+                echo env.TAG_NAME
             }
         }
         unstable{
             script {
-
+                echo env.TAG_NAME
             }
         }
     }
@@ -32,7 +32,7 @@ pipeline {
             steps{
                 echo "Prepare start ---"
                 script{
-
+                    echo env.TAG_NAME
                 }
                 echo "Prepare finish ---"
             }
@@ -41,27 +41,27 @@ pipeline {
             steps{
                 echo "Build start ---"
                 script{
-
+                    echo env.TAG_NAME
                 }
-                echo "Build start ---"
+                echo "Build finish ---"
             }
         }
         stage('Test'){
             steps{
                 echo "Test start ---"
                 script{
-
+                    echo env.TAG_NAME
                 }
-                echo "Test start ---"
+                echo "Test finish ---"
             }
         }
         stage('Deploy'){
             steps{
                 echo "Deploy start ---"
                 script{
-
+                    echo env.TAG_NAME
                 }
-                echo "Deploy start ---"
+                echo "Deploy finish ---"
             }
         }
     }
