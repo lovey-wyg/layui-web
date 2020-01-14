@@ -5,24 +5,6 @@ pipeline {
     environment{
         PROJECT_NAME = 'web-im'
     }
-    // 结果通知
-    post{
-        success{
-            script {
-                echo env.TAG_NAME
-            }
-        }
-        failure{
-            script {
-                echo env.TAG_NAME
-            }
-        }
-        unstable{
-            script {
-                echo env.TAG_NAME
-            }
-        }
-    }
     // pipeline各个场景
     stages {
         stage('Prepare'){
